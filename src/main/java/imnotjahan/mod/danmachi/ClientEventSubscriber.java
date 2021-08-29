@@ -1,6 +1,7 @@
 package imnotjahan.mod.danmachi;
 
 import imnotjahan.mod.danmachi.entities.rendering.GoblinRenderer;
+import imnotjahan.mod.danmachi.entities.rendering.MinotaurRenderer;
 import imnotjahan.mod.danmachi.gui.container.Status;
 import imnotjahan.mod.danmachi.init.Entities;
 import net.minecraft.client.Minecraft;
@@ -44,6 +45,8 @@ public final class ClientEventSubscriber
     {
         RenderingRegistry.registerEntityRenderingHandler(Entities.GOBLIN.get(),
                 GoblinRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(Entities.MINOTAUR.get(),
+                MinotaurRenderer::new);
     }
 
     public static void init() {}

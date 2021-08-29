@@ -17,4 +17,5 @@ public class Items
     public static final Item DAMASCUS_STEEL = null;
     public static final Item LYGERFANG_FANG = null;
     public static final Item URGA_BLADE = null;
+    public static final Item GOBLIN_SPAWN_EGG = null;
 }

@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import imnotjahan.mod.danmachi.Main;
 import imnotjahan.mod.danmachi.Reference;
 import imnotjahan.mod.danmachi.entities.Goblin;
+import imnotjahan.mod.danmachi.entities.Minotaur;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
@@ -30,6 +31,7 @@ public class Entities
     private static final List<Item> SPAWN_EGGS = Lists.newArrayList();
 
     public static final RegistryObject<EntityType<Goblin>> GOBLIN = createEntity("goblin", Goblin::new, 0.4F, 0.95F, 0x000000, 0xFFFFFF);
+    public static final RegistryObject<EntityType<Minotaur>> MINOTAUR = createEntity("minotaur", Minotaur::new, 0.4F, 0.95F, 0x000000, 0xFFFFFF);
 
     private static <T extends MonsterEntity> RegistryObject<EntityType<T>> createEntity(String name, EntityType.IFactory<T> factory, float width, float height, int eggPrimary, int eggSecondary)
     {
@@ -46,12 +48,14 @@ public class Entities
     public static void registerEntities(RegistryEvent.Register<EntityType<?>> event)
     {
         EntitySpawnPlacementRegistry.register(GOBLIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.WORLD_SURFACE, Goblin::checkMobSpawnRules);
+        EntitySpawnPlacementRegistry.register(MINOTAUR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.WORLD_SURFACE, Minotaur::checkMobSpawnRules);
     }
 
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event)
     {
         event.put(GOBLIN.get(), Goblin.createAttributes().build());
+        event.put(MINOTAUR.get(), Minotaur.createAttributes().build());
     }
 
     @SubscribeEvent

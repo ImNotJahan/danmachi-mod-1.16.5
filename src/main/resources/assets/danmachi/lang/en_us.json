@@ -59,6 +59,7 @@
     "item.danmachi.bugbear_nail": "Bugbear Nail",
     "item.danmachi.metal_rabbit_fur": "Metal Rabbit Fur",
     "item.danmachi.sword_stag_antler": "Sword Stag Antler",
+    "item.danmachi.goblin_spawn_egg": "Goblin Spawn Egg",
 
     "": "/blocks",
     "block.danmachi.adamantite_block": "Adamantite Block",
@@ -102,6 +103,7 @@
     "itemGroup.danmachi_materials": "Danmachi Materials",
     "itemGroup.danmachi_tools": "Danmachi Tools",
     "itemGroup.danmachi_blocks": "Danmachi Blocks",
+    "itemGroup.danmachi_eggs": "Danmachi Mobs",
 
     "": "/tooltips",
     "tooltips.hakugen": "Right click to stab yourself",
