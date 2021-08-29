@@ -1,0 +1,8 @@
+{
+  "parent": "danmachi:block/smithing_anvil",
+  "textures": {
+    "particle": "danmachi:blocks/smithing_anvil_base",
+    "body": "danmachi:blocks/smithing_anvil_base",
+    "top": "danmachi:blocks/smithing_anvil_top"
+  }
+}

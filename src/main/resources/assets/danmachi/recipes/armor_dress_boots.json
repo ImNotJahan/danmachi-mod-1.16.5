@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "l l",
+    "i i"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    "l": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "danmachi:armor_dress_boots"
+  }
+}

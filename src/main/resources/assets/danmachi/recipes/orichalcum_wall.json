@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "as",
+    "sa"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:cobblestone"
+    },
+    "a": {
+      "type": "forge:ore_dict",
+      "ore": "ingotOrichalcum"
+    }
+  },
+  "result": {
+    "item": "danmachi:orichalcum_wall"
+  }
+}

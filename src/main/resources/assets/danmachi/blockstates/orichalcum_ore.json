@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "danmachi:block/orichalcum_ore"
+      },
+      {
+        "model": "danmachi:block/orichalcum_ore",
+        "y": 90
+      },
+      {
+        "model": "danmachi:block/orichalcum_ore",
+        "y": 180
+      },
+      {
+        "model": "danmachi:block/orichalcum_ore",
+        "y": 270
+      }
+    ]
+  }
+}

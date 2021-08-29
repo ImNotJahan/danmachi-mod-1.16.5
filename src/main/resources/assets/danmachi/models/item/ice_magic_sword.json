@@ -1,0 +1,18 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "danmachi:items/ice_magic_sword"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, -90, 40 ],
+      "translation": [ 0, 10, 3 ],
+      "scale": [ 1.5, 1.5, 1.5 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, -90, -40 ],
+      "translation": [ 0, 10, 3 ],
+      "scale": [ 1.5, 1.5, 1.5 ]
+    }
+  }
+}

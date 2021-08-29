@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "type=0": { "model":  "danmachi:dungeon_wall" },
+    "type=1": { "model":  "danmachi:cracked_dungeon_wall" },
+    "type=2": { "model":  "danmachi:viney_dungeon_wall" },
+    "type=3": { "model":  "danmachi:cracked_and_viney_dungeon_wall" },
+    "normal": { "model":  "danmachi:dungeon_wall" }
+  }
+}

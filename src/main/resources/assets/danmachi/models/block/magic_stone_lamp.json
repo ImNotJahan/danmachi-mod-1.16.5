@@ -1,0 +1,7 @@
+{
+  "parent": "danmachi:block/template_lantern",
+  "textures": {
+    "lantern": "danmachi:blocks/magic_stone_lamp",
+    "all": "danmachi:blocks/magic_stone_lamp"
+  }
+}

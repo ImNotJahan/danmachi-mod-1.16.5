@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "danmachi:block/mythril_block"
+      },
+      {
+        "model": "danmachi:block/mythril_block",
+        "y": 90
+      },
+      {
+        "model": "danmachi:block/mythril_block",
+        "y": 180
+      },
+      {
+        "model": "danmachi:block/mythril_block",
+        "y": 270
+      }
+    ]
+  }
+}

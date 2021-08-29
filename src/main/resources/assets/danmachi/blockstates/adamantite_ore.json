@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "danmachi:block/adamantite_ore"
+      },
+      {
+        "model": "danmachi:block/adamantite_ore",
+        "y": 90
+      },
+      {
+        "model": "danmachi:block/adamantite_ore",
+        "y": 180
+      },
+      {
+        "model": "danmachi:block/adamantite_ore",
+        "y": 270
+      }
+    ]
+  }
+}

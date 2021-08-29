@@ -1,0 +1,7 @@
+{
+    "parent": "danmachi:block/fire_up",
+    "textures": {
+        "particle": "danmachi:blocks/fire_layer_0",
+        "fire": "danmachi:blocks/fire_layer_0"
+    }
+}

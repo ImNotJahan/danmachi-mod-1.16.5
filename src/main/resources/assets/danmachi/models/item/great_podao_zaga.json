@@ -1,0 +1,18 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "danmachi:items/great_podao_zaga"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, -90, 40 ],
+      "translation": [ 0, 13, 2 ],
+      "scale": [ 2.0, 2.0, 2.0 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, -90, 40 ],
+      "translation": [ 0, 13, 2 ],
+      "scale": [ 2.0, 2.0, 2.0 ]
+    }
+  }
+}

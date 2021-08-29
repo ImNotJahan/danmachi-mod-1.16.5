@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " mm",
+    " s ",
+    "s  "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "m": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "danmachi:hammer"
+  }
+}
