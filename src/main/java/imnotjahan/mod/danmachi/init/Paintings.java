@@ -17,4 +17,10 @@ public class Paintings
 
     public static RegistryObject<PaintingType> RYE_BREAD =
             PAINTING_TYPES.register("rye_bread", ()-> new PaintingType(16,32));
+
+    public static RegistryObject<PaintingType> SOMEONE_NAMED_FOOL =
+            PAINTING_TYPES.register("someone_named_fool", ()-> new PaintingType(32,64));
+
+    public static RegistryObject<PaintingType> CHANCE_MEETING =
+            PAINTING_TYPES.register("chance_meeting", ()-> new PaintingType(32,48));
 }
