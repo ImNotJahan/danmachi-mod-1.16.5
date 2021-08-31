@@ -11,6 +11,10 @@ public class Paintings
     public static DeferredRegister<PaintingType> PAINTING_TYPES =
             DeferredRegister.create(ForgeRegistries.PAINTING_TYPES, Reference.MODID);
 
-    public static RegistryObject<PaintingType> THE_SCREEM =
-            PAINTING_TYPES.register("painting_name", ()-> new PaintingType(16,32));
+
+    public static RegistryObject<PaintingType> THE_RESOLUTION =
+            PAINTING_TYPES.register("the_resolution", ()-> new PaintingType(16,32));
+
+    public static RegistryObject<PaintingType> RYE_BREAD =
+            PAINTING_TYPES.register("rye_bread", ()-> new PaintingType(16,32));
 }
