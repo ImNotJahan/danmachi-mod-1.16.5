@@ -5,7 +5,9 @@ import com.google.common.collect.Lists;
 import imnotjahan.mod.danmachi.Main;
 import imnotjahan.mod.danmachi.Reference;
 import imnotjahan.mod.danmachi.entities.Goblin;
+import imnotjahan.mod.danmachi.entities.Hestia;
 import imnotjahan.mod.danmachi.entities.Minotaur;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
@@ -30,13 +32,19 @@ public class Entities
     public static final DeferredRegister<EntityType<?>> ENTITY_DEFERRED = DeferredRegister.create(ForgeRegistries.ENTITIES, Reference.MODID);
     private static final List<Item> SPAWN_EGGS = Lists.newArrayList();
 
-    public static final RegistryObject<EntityType<Goblin>> GOBLIN = createEntity("goblin", Goblin::new, 0.4F, 0.95F, 0x000000, 0xFFFFFF);
-    public static final RegistryObject<EntityType<Minotaur>> MINOTAUR = createEntity("minotaur", Minotaur::new, 0.4F, 0.95F, 0x000000, 0xFFFFFF);
+    public static final RegistryObject<EntityType<Goblin>> GOBLIN = createEntity("goblin", Goblin::new,
+            1F, 1.7F, 0x000000, 0xFFFFFF);
+    public static final RegistryObject<EntityType<Minotaur>> MINOTAUR = createEntity("minotaur", Minotaur::new,
+            1F, 2.2F, 0x000000, 0xFFFFFF);
+    public static final RegistryObject<EntityType<Hestia>> HESTIA = createEntity("hestia", Hestia::new,
+            1F, 2F, 0x000000, 0xFFFFFF);
 
-    private static <T extends MonsterEntity> RegistryObject<EntityType<T>> createEntity(String name, EntityType.IFactory<T> factory, float width, float height, int eggPrimary, int eggSecondary)
+    private static <T extends Entity> RegistryObject<EntityType<T>>
+    createEntity(String name, EntityType.IFactory<T> factory, float width, float height, int eggPrimary, int eggSecondary)
     {
         ResourceLocation location = new ResourceLocation(Reference.MODID, name);
-        EntityType<T> entity = EntityType.Builder.of(factory, EntityClassification.MONSTER).sized(width, height).setTrackingRange(64).setUpdateInterval(1).build(location.toString());
+        EntityType<T> entity = EntityType.Builder.of(factory, EntityClassification.MONSTER).sized(width, height)
+                .setTrackingRange(64).setUpdateInterval(1).build(location.toString());
         Item spawnEgg = new SpawnEggItem(entity, eggPrimary, eggSecondary, (new Item.Properties()).tab(Main.EggGroup));
         spawnEgg.setRegistryName(new ResourceLocation(Reference.MODID, name + "_spawn_egg"));
         SPAWN_EGGS.add(spawnEgg);
@@ -47,8 +55,12 @@ public class Entities
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityType<?>> event)
     {
-        EntitySpawnPlacementRegistry.register(GOBLIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.WORLD_SURFACE, Goblin::checkMobSpawnRules);
-        EntitySpawnPlacementRegistry.register(MINOTAUR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.WORLD_SURFACE, Minotaur::checkMobSpawnRules);
+        EntitySpawnPlacementRegistry.register(GOBLIN.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+                Heightmap.Type.WORLD_SURFACE, Goblin::checkMobSpawnRules);
+        EntitySpawnPlacementRegistry.register(MINOTAUR.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+                Heightmap.Type.WORLD_SURFACE, Minotaur::checkMobSpawnRules);
+        EntitySpawnPlacementRegistry.register(HESTIA.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+                Heightmap.Type.WORLD_SURFACE, Hestia::checkMobSpawnRules);
     }
 
     @SubscribeEvent
@@ -56,6 +68,7 @@ public class Entities
     {
         event.put(GOBLIN.get(), Goblin.createAttributes().build());
         event.put(MINOTAUR.get(), Minotaur.createAttributes().build());
+        event.put(HESTIA.get(), Hestia.createGodAttributes().build());
     }
 
     @SubscribeEvent

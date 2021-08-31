@@ -2,6 +2,7 @@ package imnotjahan.mod.danmachi;
 
 import imnotjahan.mod.danmachi.init.Entities;
 import imnotjahan.mod.danmachi.init.Items;
+import imnotjahan.mod.danmachi.init.Paintings;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +32,7 @@ public class Main
         eventBus.addListener(this::SetupClient);
 
         registerDeferredRegistries(eventBus);
+        Paintings.PAINTING_TYPES.register(eventBus);
     }
 
     public void SetupClient(final FMLClientSetupEvent event)
